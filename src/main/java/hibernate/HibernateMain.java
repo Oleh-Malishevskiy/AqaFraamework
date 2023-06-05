@@ -3,6 +3,8 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
+import java.util.Random;
+import java.util.UUID;
 
 import static hibernate.HibernateUtil.getSessionFactory;
 
@@ -12,38 +14,31 @@ public class HibernateMain  {
 
 
 
-    public static void main(String[] args) throws NoSuchAlgorithmException {
+    public static void saveToApiLogs(String response ,Integer statusCode) {
+        SaveApiLogsModel saveLogs = new SaveApiLogsModel();
+        saveLogs.setId(new Random().nextLong());
+        saveLogs.setResponse(response);
+        saveLogs.setStatusCode(statusCode);
+        session.save(saveLogs);
 
 
-
-
-        printProblemTable();
     }
+    public static void saveToWebLogs(Long id,String dom ,String logger) {
+        SaveWebLogsModel saveLogs = new SaveWebLogsModel();
+        saveLogs.setId(id);
+        saveLogs.setDom(dom);
+        saveLogs.setLogger(logger);
+        session.save(saveLogs);
 
 
-
-    public static void printCreatedProject() {
+    }
+    public static void beginTrans(){
         session.beginTransaction();
-        Query queryAll = session.createQuery("FROM "+ MantisProjectTable.class.getName());
-        List<MantisProjectTable> results = queryAll.list();
-        System.out.println(results);
+    }
+    public static void closeSession(){
         session.getTransaction().commit();
         session.close();
-        System.exit(0);
-
     }
-    public static void printProblemTable() {
-        session.beginTransaction();
-        Query query1 = session.createQuery("FROM "+ MantisTextBugTable.class.getName());
-        List<MantisProjectTable> results = query1.list();
-        System.out.println(results);
-//        Query query2 = session.createQuery("FROM "+ MantisBugTable.class.getName());
-//        List<MantisProjectTable> results2 = query2.list();
-//        System.out.println(results2);
-        session.getTransaction().commit();
-        session.close();
-        System.exit(0);
 
-    }
 
 }

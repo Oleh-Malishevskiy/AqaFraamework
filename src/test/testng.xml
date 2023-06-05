@@ -5,12 +5,13 @@
         <parameter name="browser" value="chrome"></parameter>
         <classes>
             <class name="webUITest.TestObject" />
+            <class name="webUITest.WebRiverTest"></class>
         </classes>
     </test> <!-- ParallelTest -->
 <!--    <test thread-count="1" name="ParallelTest2">-->
 <!--        <parameter name="browser" value="chrome"></parameter>-->
 <!--        <classes>-->
-<!--            <class name="webUITest.TestEdge" />-->
+<!--            <class name="webUITest.WebRiverTest" />-->
 <!--        </classes>-->
 <!--    </test> &lt;!&ndash; ParallelTest2 &ndash;&gt;-->
 </suite> <!-- ParallelSuite -->

@@ -10,8 +10,8 @@ public class ParallelExc {
 
     @Parameters({"browser"})
     @BeforeMethod
-    public void setDriver(String browserType) {
-        WebDriver driver = DriverPool.createDriverInstance(browserType);
+    public void setDriver(String type) {
+        WebDriver driver = DriverPool.createDriverInstance(type);
         threadLocalDriver.set(driver);
     }
 

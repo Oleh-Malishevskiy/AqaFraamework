@@ -8,6 +8,8 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import static hibernate.HibernateMain.*;
+
 public class AllureTestListener implements ITestListener {
 
 
@@ -28,6 +30,10 @@ public class AllureTestListener implements ITestListener {
         ITestListener.super.onTestFailure(result);
         getScreenshot();
         getDom();
+        beginTrans();
+        saveToWebLogs(result.getEndMillis(),getDom(),result.getName());
+        closeSession();
+
     }
     @Override
     public void onTestSuccess(ITestResult result) {

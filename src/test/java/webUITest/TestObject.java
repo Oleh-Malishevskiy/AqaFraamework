@@ -11,8 +11,7 @@ import org.testng.annotations.*;
 import webUI.BaseObject;
 import webUI.pageObject.*;
 
-import static hibernate.HibernateMain.printCreatedProject;
-import static hibernate.HibernateMain.printProblemTable;
+
 
 
 @Listeners({

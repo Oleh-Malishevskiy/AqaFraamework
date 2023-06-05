@@ -15,41 +15,22 @@ public class DriverPool {
     public static WebDriver createDriverInstance(String browserType) {
 
         WebDriver driver = null;
+        switch (browserType){
+            case "chrome":
+                System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--remote-allow-origins=*");
+                driver = new ChromeDriver(options);
+                break;
+            case "firefox":
+                System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 
-        if(browserType.equals("chrome")) {
+                FirefoxOptions options2 = new FirefoxOptions();
 
-            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--remote-allow-origins=*");
-            driver = new ChromeDriver(options);
-
-        }else if(browserType.equals("firefox")) {
-
-            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
-
-            FirefoxOptions options = new FirefoxOptions();
-
-            driver = new FirefoxDriver(options);
-
-        }else if(browserType.equals("ie")) {
-
-            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
-
-            InternetExplorerOptions options = new InternetExplorerOptions();
-
-            options.introduceFlakinessByIgnoringSecurityDomains();
-
-            options.ignoreZoomSettings();
-
-            driver = new InternetExplorerDriver(options);
-
-        }else if(browserType.equals("edge")) {
-
-            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
-
-            driver = new EdgeDriver();
-
+                driver = new FirefoxDriver(options2);
+                break;
         }
+
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         return driver;
 
