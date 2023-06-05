@@ -1,4 +1,5 @@
 package webUITest;
+import driverHelper.NonXmlRun;
 import driverHelper.ParallelExc;
 import listeners.AllureTestListener;
 import listeners.CustomSuiteListener;
@@ -26,7 +27,7 @@ public class TestObject extends ParallelExc {
 
     @Test
     public void  CreateProjectRoute() throws InterruptedException {
-        WebDriver driver = getDriver();
+        WebDriver driver = get();
         BaseObject baseObject = new BaseObject(driver);
         HomePage homePage = new HomePage(driver);
         LogInPage logInPage = new LogInPage(driver);
@@ -34,8 +35,8 @@ public class TestObject extends ParallelExc {
         ManagePage managePage = new ManagePage(driver);
         baseObject.open("http://localhost/my_view_page.php");
         logInPage
-                .writeUserName()
-                .writeUserPassword();
+                .writeUserName("administrator")
+                .writeUserPassword("root");
         homePage
                 .goToManagePage();
         managePage
@@ -46,75 +47,45 @@ public class TestObject extends ParallelExc {
                 .create();
         Assert.assertTrue(projectPage.checkCreation());
     }
+
     @Test
-    public void  CreateProjectRoute2() throws InterruptedException {
-        WebDriver driver = getDriver();
+    public void  CreateProblemRoute() throws InterruptedException {
+        WebDriver driver = get();
         BaseObject baseObject = new BaseObject(driver);
         HomePage homePage = new HomePage(driver);
         LogInPage logInPage = new LogInPage(driver);
-        ProjectPage projectPage = new ProjectPage(driver);
-        ManagePage managePage = new ManagePage(driver);
+        ProblemPage problemPage = new ProblemPage(driver);
+        ProblemsBrowserPage problemsBrowserPage = new ProblemsBrowserPage(driver);
+        CreateProblemPage createProblemPage = new CreateProblemPage(driver);
         baseObject.open("http://localhost/my_view_page.php");
         logInPage
-                .writeUserName()
-                .writeUserPassword();
-        homePage
-                .goToManagePage();
-        managePage
-                .goToProjectPage();
-        projectPage
-                .createProject()
-                .writeData()
-                .create();
-         Assert.assertTrue(projectPage.checkCreation());
+                .writeUserName("administrator")
+                .writeUserPassword("root");
+
     }
-//    @Test
-//    public void  CreateProblemRoute() throws InterruptedException {
-//        WebDriver driver = getDriver();
-//        BaseObject baseObject = new BaseObject(driver);
-//        HomePage homePage = new HomePage(driver);
-//        LogInPage logInPage = new LogInPage(driver);
-//        ProblemPage problemPage = new ProblemPage(driver);
-//        ProblemsBrowserPage problemsBrowserPage = new ProblemsBrowserPage(driver);
-//        CreateProblemPage createProblemPage = new CreateProblemPage(driver);
-//        baseObject.open("http://localhost/my_view_page.php");
-//        logInPage
-//                .writeUserName()
-//                .writeUserPassword();
-//        homePage
-//                .goToProblemPage();
-//        problemPage
-//                .openSelect()
-//                .chooseOption();
-//        createProblemPage
-//                .selectUser()
-//                .writeInfo()
-//                .createProblem();
-//        Assert.assertTrue(problemsBrowserPage.getProblemName());
-//
-//    }
-//    @Test
-//    public void  InviteUserAndUpdateRoute() throws InterruptedException {
-//        WebDriver driver = getDriver();
-//        BaseObject baseObject = new BaseObject(driver);
-//        HomePage homePage = new HomePage(driver);
-//        LogInPage logInPage = new LogInPage(driver);
-//        InviteUserPage inviteUserPage = new InviteUserPage(driver);
-//        UpdateUserPage updateUserPage = new UpdateUserPage(driver);
-//        baseObject.open("http://localhost/my_view_page.php");
-//        logInPage
-//                .writeUserName()
-//                .writeUserPassword();
-//        homePage
-//                .goInviteUserPage();
-//        inviteUserPage
-//                .writeDataInfo()
-//                .selectOption()
-//                .inviteNewUser();
-//        updateUserPage
-//                .updateDataInfo()
-//                .updateSelectOption()
-//                .updateUser();
-//    }
+
+    @Test
+    public void  InviteUserAndUpdateRoute() throws InterruptedException {
+        WebDriver driver = get();
+        BaseObject baseObject = new BaseObject(driver);
+        HomePage homePage = new HomePage(driver);
+        LogInPage logInPage = new LogInPage(driver);
+        InviteUserPage inviteUserPage = new InviteUserPage(driver);
+        UpdateUserPage updateUserPage = new UpdateUserPage(driver);
+        baseObject.open("http://localhost/my_view_page.php");
+        logInPage
+                .writeUserName("administrator")
+                .writeUserPassword("root");
+        homePage
+                .goInviteUserPage();
+        inviteUserPage
+                .writeDataInfo()
+                .selectOption()
+                .inviteNewUser();
+        updateUserPage
+                .updateDataInfo()
+                .updateSelectOption()
+                .updateUser();
+    }
 
 }

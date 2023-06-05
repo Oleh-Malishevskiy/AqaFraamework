@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="methods" name="Failed suite [ParallelSuite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="4" parallel="methods" name="ParallelTest(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="webUITest.TestObject">
+        <methods>
+          <include name="CreateProblemRoute"/>
+          <include name="setDriver"/>
+        </methods>
+      </class> <!-- webUITest.TestObject -->
+    </classes>
+  </test> <!-- ParallelTest(failed) -->
+</suite> <!-- Failed suite [ParallelSuite] -->

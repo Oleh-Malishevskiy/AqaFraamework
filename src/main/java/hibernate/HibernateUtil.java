@@ -16,22 +16,22 @@ public class HibernateUtil {
 
             Properties hibernateProps = new Properties();
             hibernateProps.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-            hibernateProps.put(Environment.URL, "jdbc:mysql://localhost:3316/bugtracker");
+            hibernateProps.put(Environment.URL, "jdbc:mysql://localhost/New1");
             hibernateProps.put(Environment.USER, "root");
-            //hibernateProps.put(Environment.PASS, "Qqwe12345678");
+            hibernateProps.put(Environment.PASS, "Qqwe12345678");
 
             hibernateProps.put(Environment.DIALECT, "org.hibernate.dialect.MySQL8Dialect");
 
             hibernateProps.put(Environment.SHOW_SQL, "true");
             hibernateProps.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
-            //hibernateProps.put(Environment.HBM2DDL_AUTO, "create");
+            hibernateProps.put(Environment.HBM2DDL_AUTO, "create");
 
 
             Configuration configuration = new Configuration();
             configuration.setProperties(hibernateProps);
 
             configuration.addAnnotatedClass(MantisProjectTable.class);
-            configuration.addAnnotatedClass(MantisBugTable.class);
+            configuration.addAnnotatedClass(SaveLogs.class);
             configuration.addAnnotatedClass(MantisTextBugTable.class);
 
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()

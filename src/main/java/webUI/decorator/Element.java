@@ -21,7 +21,7 @@ public class Element {
 
     public void waitForMy(){
         long start=new Date().getTime();
-        Wait wait = new FluentWait(ParallelExc.getDriver())
+        Wait wait = new FluentWait(ParallelExc.get())
                 .withTimeout(Duration.of(10, ChronoUnit.SECONDS))
                 .pollingEvery(Duration.of(1, ChronoUnit.SECONDS))
                 .ignoring(Exception.class);

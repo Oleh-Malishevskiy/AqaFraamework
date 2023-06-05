@@ -1,28 +1,28 @@
 package driverHelper;
 
+
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
+
+import org.testng.annotations.*;
 
 public class ParallelExc {
     protected static ThreadLocal<WebDriver> threadLocalDriver =  new ThreadLocal<WebDriver>();
 
-    @Parameters({"browser"})
+
     @BeforeMethod
-    public void setDriver(String browserType) {
-        WebDriver driver = DriverPool.createDriverInstance(browserType);
+    public void set() {
+        WebDriver driver = DriverPool.createDriverInstance("chrome");
         threadLocalDriver.set(driver);
     }
 
-    public static WebDriver getDriver() {
+    public static WebDriver get() {
         return threadLocalDriver.get();
     }
 
 //    @AfterMethod
 //    public void removeDriver() {
-//        getDriver().close();
-//        getDriver().quit();
+//        get().close();
+//        get().quit();
 //        threadLocalDriver.remove();
 //    }
 }

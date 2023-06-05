@@ -1,0 +1,217 @@
+<html><head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>MantisBT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/default.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/status_config.php?cache_key=aa1f2a23a907e5ec5c9ef47830e8b025">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/dropzone-5.5.0.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/bootstrap-3.4.1.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/font-awesome-4.7.0.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/bootstrap-datetimepicker-4.17.47.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/ace.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/ace-mantis.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/ace-skins.min.css">
+
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: повнотекстовий пошук" href="http://localhost/browser_search_plugin.php?type=text">
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: пошук за ідентифікатором проблеми" href="http://localhost/browser_search_plugin.php?type=id">
+	<script type="text/javascript" src="/javascript_config.php?cache_key=aa1f2a23a907e5ec5c9ef47830e8b025"></script>
+	<script type="text/javascript" src="/javascript_translations.php?cache_key=17dafd49333a73d719b2f6092aa4545a"></script>
+	<script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="/js/dropzone-5.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body class="skin-3">
+<style>
+* { font-family: "Open Sans"; } 
+h1, h2, h3, h4, h5 { font-family: "Open Sans"; } 
+</style>
+<div id="navbar" class="navbar navbar-default navbar-collapse navbar-fixed-top noprint"><div id="navbar-container" class="navbar-container"><button id="menu-toggler" type="button" class="navbar-toggle menu-toggler pull-left hidden-lg hidden-md" data-target="#sidebar"><span class="sr-only">Toggle sidebar</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="navbar-header"><a href="/my_view_page.php" class="navbar-brand"><span class="smaller-75"> MantisBT </span></a><button type="button" class="navbar-toggle navbar-toggle collapsed pull-right hidden-sm hidden-md hidden-lg" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu"><span class="sr-only">Toggle user menu</span><i class="fa fa-user ace-icon fa-2x white"></i> </button></div><div class="navbar-buttons navbar-header navbar-collapse collapse"><ul class="nav ace-nav"><li class="hidden-sm hidden-xs"><div class="btn-group btn-corner padding-right-8 padding-left-8"><a class="btn btn-primary btn-sm" href="manage_user_create_page.php"><i class="fa fa-user-plus "></i> Запросити користувачів</a></div></li>
+<li class="grey open" id="dropdown_projects_menu">
+<a data-toggle="dropdown" href="#" class="dropdown-toggle" aria-expanded="true">
+&nbsp;Всі проекти&nbsp;
+<i class="fa fa-angle-down ace-icon bigger-110"></i>
+</a>
+<ul id="projects-list" class=" dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close">
+<li><div class="projects-searchbox" style="display: none;"><input class="search form-control input-md" placeholder="Знайти"></div></li>
+<li class="divider"></li>
+<li><div class="scrollable-menu">
+<ul class="list dropdown-yellow no-margin"><li><a class="project-link" href="/set_project.php?project_id=0">Всі проекти</a></li><li class="divider"></li></ul>
+</div>
+</li>
+</ul>
+</li>
+<li class="grey"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-user ace-icon fa-2x white"></i> <span class="user-info">administrator</span><i class="fa fa-angle-down ace-icon"></i></a><ul class="user-menu dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close"><li><a href="/account_page.php"><i class="fa fa-user ace-icon"></i> Мій запис</a></li><li><a href="http://localhost/issues_rss.php?username=administrator&amp;key=5dWBHqN2-NnMxiEn__N-wvHKX0-ruQxMKoLs6KqDcYauf6e_vVx8ypqjHfzxFJAHPs7vmwlw_jhSxC7MPNjs"><i class="fa fa-rss-square orange ace-icon"></i> RSS</a></li><li class="divider"></li><li><a href="/logout_page.php"><i class="fa fa-sign-out ace-icon"></i> Вийти</a></li></ul></li></ul></div></div></div><div class="main-container" id="main-container" style="padding-top: 45px;">
+<div id="sidebar" class="sidebar sidebar-fixed responsive compact "><ul class="nav nav-list"><li>
+<a href="/my_view_page.php">
+<i class="fa fa-dashboard menu-icon"></i>
+<span class="menu-text"> Моя сторінка </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/view_all_bug_page.php">
+<i class="fa fa-list-alt menu-icon"></i>
+<span class="menu-text"> Браузер проблем </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/changelog_page.php">
+<i class="fa fa-retweet menu-icon"></i>
+<span class="menu-text"> Хронологія </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/roadmap_page.php">
+<i class="fa fa-road menu-icon"></i>
+<span class="menu-text"> Дорожня карта </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/summary_page.php">
+<i class="fa fa-bar-chart-o menu-icon"></i>
+<span class="menu-text"> Статистика </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li class="active">
+<a href="/manage_overview_page.php">
+<i class="fa fa-gears menu-icon"></i>
+<span class="menu-text"> Управління </span>
+</a>
+<b class="arrow"></b>
+</li>
+</ul><div id="sidebar-btn" class="sidebar-toggle sidebar-collapse"><i data-icon2="ace-icon fa fa-angle-double-right" data-icon1="ace-icon fa fa-angle-double-left" class="ace-icon fa fa-angle-double-left"></i></div></div><div class="main-content">
+<div id="breadcrumbs" class="breadcrumbs noprint">
+<ul class="breadcrumb">
+  <li><i class="fa fa-user home-icon active"></i>  <a href="/account_page.php">administrator</a>
+  <span class="label hidden-xs label-default arrowed">Адміністратор</span></li>
+</ul>
+<div id="nav-search" class="nav-search"><form class="form-search" method="post" action="/jump_to_bug.php"><span class="input-icon"><input type="text" name="bug_id" autocomplete="off" class="nav-search-input" placeholder="Проблема #"><i class="fa fa-search ace-icon nav-search-icon"></i></span></form></div>
+</div>
+  <div class="page-content">
+<div class="row">
+<ul class="nav nav-tabs padding-18">
+<li class=""><a href="manage_overview_page.php"><i class="fa fa-info-circle blue ace-icon"></i></a></li>
+<li class=""><a href="/manage_user_page.php">Користувачі</a></li>
+<li class=""><a href="/manage_proj_page.php">Проекти</a></li>
+<li class=""><a href="/manage_tags_page.php">Управління тегами</a></li>
+<li class=""><a href="/manage_custom_field_page.php">Власні поля</a></li>
+<li class=""><a href="/manage_prof_menu_page.php">Керування глобальними профілями</a></li>
+<li class=""><a href="/manage_plugin_page.php">Керування Модулями</a></li>
+<li class=""><a href="/adm_permissions_report.php">Управління конфігурацією</a></li>
+</ul>
+<div class="col-md-12 col-xs-12">
+<div class="space-10"></div>
+<div id="manage-user-create-div" class="form-container">
+	<form id="manage-user-create-form" method="post" action="manage_user_create.php">
+	<div class="widget-box widget-color-blue2">
+		<div class="widget-header widget-header-small">
+			<h4 class="widget-title lighter">
+				<i class="fa fa-user ace-icon"></i>				Новий запис			</h4>
+		</div>
+		<div class="widget-body">
+		<div class="widget-main no-padding">
+		<div class="table-responsive">
+		<fieldset>
+			<input type="hidden" name="manage_user_create_token" value="20230604uQ88AyV1_bZ7ohcdOpUsT8wZOkrY6VjS">
+			</fieldset><table class="table table-bordered table-condensed table-striped">
+		<tbody><tr>
+				<td class="category">
+					Користувач				</td>
+				<td>
+					<input type="text" id="user-username" name="username" class="input-sm" size="32" maxlength="191">
+				</td>
+			</tr>			<tr>
+				<td class="category">
+					Справжнє ім'я				</td>
+				<td>
+					<input type="text" id="user-realname" name="realname" class="input-sm" size="32" maxlength="255">
+				</td>
+			</tr>			<tr>
+				<td class="category">
+					Електронна пошта				</td>
+				<td>
+					<input class="input-sm" id="email-field" type="text" name="email" size="32" maxlength="64" value="">				</td>
+			</tr>			<tr>
+				<td class="category">
+					Рівень доступу				</td>
+				<td>
+					<select id="user-access-level" name="access_level" class="input-sm">
+						<option value="10">Спостерігач</option><option value="25" selected="selected">Репортер</option><option value="40">Редактор</option><option value="55">Розробник</option><option value="70">Керівник</option><option value="90">Адміністратор</option>					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="category">
+					Ввімкнений				</td>
+				<td>
+					<label>
+						<input type="checkbox" class="ace" id="user-enabled" name="enabled" checked="checked">
+						<span class="lbl"></span>
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td class="category">
+					Захищений				</td>
+				<td>
+					<label>
+						<input type="checkbox" class="ace" id="user-protected" name="protected">
+						<span class="lbl"></span>
+					</label>
+				</td>
+			</tr>
+			
+			</tbody></table>
+			</div>
+			</div>
+			</div>
+
+			
+			<div class="widget-toolbox padding-8 clearfix">
+				<input type="submit" class="btn btn-primary btn-white btn-round" value="Створити запис">
+			</div>
+		</div>
+		</form></div>
+	
+</div>
+
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="space-20"></div>
+<div class="footer noprint">
+<div class="footer-inner">
+<div class="footer-content">
+<div class="col-md-6 col-xs-12 no-padding">
+<address>
+<strong>Powered by <a href="https://www.mantisbt.org" title="bug tracking software">MantisBT </a></strong> <br>
+<small>Copyright © 2000 - 2023 MantisBT Team</small><br><small>Зв'яжіться з <a href="mailto:webmaster@example.com" title="Написати веб-майстру по ел. пошті">адміністратором</a> для отримання допомоги</small><br>
+</address>
+</div>
+<div class="col-md-6 col-xs-12">
+<div class="pull-right" id="powered-by-mantisbt-logo">
+<a href="https://www.mantisbt.org" title="Mantis Bug Tracker: a free and open source web based bug tracking system."><img src="/images/mantis_logo.png" width="102" height="35" alt="Powered by Mantis Bug Tracker: a free and open source web based bug tracking system."></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="btn-scroll-up btn btn-sm btn-inverse display" id="btn-scroll-up" href="#">
+<i class="fa fa-angle-double-up ace-icon icon-only bigger-110"></i>
+</a>
+</div>
+	<script type="text/javascript" src="/js/bootstrap-3.4.1.min.js"></script>
+	<script type="text/javascript" src="/js/moment-with-locales-2.29.4.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap-datetimepicker-4.17.47.min.js"></script>
+	<script type="text/javascript" src="/js/typeahead.jquery-1.3.0.min.js"></script>
+	<script type="text/javascript" src="/js/list-1.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/ace.min.js"></script>
+
+
+</body></html>

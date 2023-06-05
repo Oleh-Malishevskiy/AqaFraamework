@@ -12,21 +12,13 @@ public class HibernateMain  {
 
 
 
-    public static void main(String[] args) throws NoSuchAlgorithmException {
 
 
-
-
-        printProblemTable();
-    }
-
-
-
-    public static void printCreatedProject() {
+    public static void printCreatedProject(String log) {
         session.beginTransaction();
-        Query queryAll = session.createQuery("FROM "+ MantisProjectTable.class.getName());
-        List<MantisProjectTable> results = queryAll.list();
-        System.out.println(results);
+        SaveLogs saveLogs = new SaveLogs();
+        saveLogs.setLogs(log);
+        session.save(saveLogs);
         session.getTransaction().commit();
         session.close();
         System.exit(0);

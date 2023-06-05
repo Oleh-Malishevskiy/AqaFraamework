@@ -10,7 +10,7 @@ import webUI.decorator.MyButton;
 import webUI.decorator.MyInput;
 
 public class LogInPage extends BaseObject {
-    @FindBy(xpath ="//*[@id=\"username\"]")
+    @FindBy(xpath ="/html/body/div/div/div/div/div/div[4]/div/div/div/form/fieldset/label/span/input")
     private MyInput userNameInput;
     @FindBy(xpath ="//*[@id=\"login-form\"]/fieldset/input[2]")
     private MyButton userNameButton;
@@ -23,15 +23,15 @@ public class LogInPage extends BaseObject {
         super(driver);
     }
 
-    public LogInPage writeUserName(){
-//        WebElement nameInput = driver.findElement(userNameInput);
-        userNameInput.input("administrator");
+    public LogInPage writeUserName(String pass){
+        userNameInput.waitForMy();
+        userNameInput.input(pass);
         userNameButton.myClick();
         return this;
     }
-    public LogInPage writeUserPassword() throws InterruptedException {
+    public LogInPage writeUserPassword(String userName) throws InterruptedException {
         Thread.sleep(1000);
-        userPasswordInput.input("rjnbr1geijr");
+        userPasswordInput.input(userName);
         userPasswordButton.myClick();
 
         return this;

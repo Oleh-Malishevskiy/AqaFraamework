@@ -30,25 +30,6 @@ public class DriverPool {
             FirefoxOptions options = new FirefoxOptions();
 
             driver = new FirefoxDriver(options);
-
-        }else if(browserType.equals("ie")) {
-
-            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
-
-            InternetExplorerOptions options = new InternetExplorerOptions();
-
-            options.introduceFlakinessByIgnoringSecurityDomains();
-
-            options.ignoreZoomSettings();
-
-            driver = new InternetExplorerDriver(options);
-
-        }else if(browserType.equals("edge")) {
-
-            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
-
-            driver = new EdgeDriver();
-
         }
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         return driver;

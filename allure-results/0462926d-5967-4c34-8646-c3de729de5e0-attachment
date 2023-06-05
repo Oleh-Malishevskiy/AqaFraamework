@@ -1,0 +1,302 @@
+<html><head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>0000001: ee00ef6c-6181-4601-bf2a-9977b69e1d61 - MantisBT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/default.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/status_config.php?cache_key=d23ebc2da81b91be8530cd5d014728d4">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/dropzone-5.5.0.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/bootstrap-3.4.1.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/font-awesome-4.7.0.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/bootstrap-datetimepicker-4.17.47.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/ace.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/ace-mantis.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/ace-skins.min.css">
+
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: повнотекстовий пошук" href="http://localhost/browser_search_plugin.php?type=text">
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: пошук за ідентифікатором проблеми" href="http://localhost/browser_search_plugin.php?type=id">
+	<script type="text/javascript" src="/javascript_config.php?cache_key=d23ebc2da81b91be8530cd5d014728d4"></script>
+	<script type="text/javascript" src="/javascript_translations.php?cache_key=17dafd49333a73d719b2f6092aa4545a"></script>
+	<script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="/js/dropzone-5.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body id="view-issue-page" class="skin-3">
+<style>
+* { font-family: "Open Sans"; } 
+h1, h2, h3, h4, h5 { font-family: "Open Sans"; } 
+</style>
+<div id="navbar" class="navbar navbar-default navbar-collapse navbar-fixed-top noprint"><div id="navbar-container" class="navbar-container"><button id="menu-toggler" type="button" class="navbar-toggle menu-toggler pull-left hidden-lg hidden-md" data-target="#sidebar"><span class="sr-only">Toggle sidebar</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="navbar-header"><a href="/my_view_page.php" class="navbar-brand"><span class="smaller-75"> MantisBT </span></a><button type="button" class="navbar-toggle navbar-toggle collapsed pull-right hidden-sm hidden-md hidden-lg" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu"><span class="sr-only">Toggle user menu</span><i class="fa fa-user ace-icon fa-2x white"></i> </button></div><div class="navbar-buttons navbar-header navbar-collapse collapse"><ul class="nav ace-nav"><li class="hidden-sm hidden-xs"><div class="btn-group btn-corner padding-right-8 padding-left-8"><a class="btn btn-primary btn-sm" href="bug_report_page.php"><i class="fa fa-edit "></i> Нова проблема</a></div></li>
+<li class="grey" id="dropdown_projects_menu">
+<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+&nbsp;9cac3965-f283-43ce-8831-5a1e1518f50b&nbsp;
+<i class="fa fa-angle-down ace-icon bigger-110"></i>
+</a>
+<ul id="projects-list" class=" dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close">
+<li><div class="projects-searchbox" style="display: none;"><input class="search form-control input-md" placeholder="Знайти"></div></li>
+<li class="divider"></li>
+<li><div class="scrollable-menu">
+<ul class="list dropdown-yellow no-margin"><li><a class="project-link" href="/set_project.php?project_id=0">Всі проекти</a></li><li class="divider"></li><li class="active"><a class="project-link" href="/set_project.php?project_id=2">9cac3965-f283-43ce-8831-5a1e1518f50b</a></li><li><a class="project-link" href="/set_project.php?project_id=1">f27cb59e-3651-4be1-b0e4-99a14685476f</a></li></ul>
+</div>
+</li>
+</ul>
+</li>
+<li class="grey"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-user ace-icon fa-2x white"></i> <span class="user-info">0c21d740-5</span><i class="fa fa-angle-down ace-icon"></i></a><ul class="user-menu dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close"><li><a href="/account_page.php"><i class="fa fa-user ace-icon"></i> Мій запис</a></li><li><a href="http://localhost/issues_rss.php?username=0c21d740-5&amp;key=7JBSGuf8rS3_nEVO19EF_n-4v2MJxsCDDl3IADF-eW3Y9BbxGQa6FbecPTNs3yv806i4AvNM5r-grOhxGtDD&amp;project_id=2"><i class="fa fa-rss-square orange ace-icon"></i> RSS</a></li><li class="divider"></li><li><a href="/logout_page.php"><i class="fa fa-sign-out ace-icon"></i> Вийти</a></li></ul></li></ul></div></div></div><div class="main-container" id="main-container" style="padding-top: 45px;">
+<div id="sidebar" class="sidebar sidebar-fixed responsive compact "><ul class="nav nav-list"><li>
+<a href="/my_view_page.php">
+<i class="fa fa-dashboard menu-icon"></i>
+<span class="menu-text"> Моя сторінка </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li class="active">
+<a href="/view_all_bug_page.php">
+<i class="fa fa-list-alt menu-icon"></i>
+<span class="menu-text"> Браузер проблем </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/bug_report_page.php">
+<i class="fa fa-edit menu-icon"></i>
+<span class="menu-text"> Нова проблема </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/changelog_page.php">
+<i class="fa fa-retweet menu-icon"></i>
+<span class="menu-text"> Хронологія </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/roadmap_page.php">
+<i class="fa fa-road menu-icon"></i>
+<span class="menu-text"> Дорожня карта </span>
+</a>
+<b class="arrow"></b>
+</li>
+</ul><div id="sidebar-btn" class="sidebar-toggle sidebar-collapse"><i data-icon2="ace-icon fa fa-angle-double-right" data-icon1="ace-icon fa fa-angle-double-left" class="ace-icon fa fa-angle-double-left"></i></div></div><div class="main-content">
+<div id="breadcrumbs" class="breadcrumbs noprint">
+<ul class="breadcrumb">
+  <li><i class="fa fa-user home-icon active"></i>  <a href="/account_page.php">0c21d740-5 ( administrator ) </a>
+  <span class="label hidden-xs label-default arrowed">Репортер</span></li>
+</ul>
+<div class="nav-recent hidden-xs">Недавно відвідані: <a href="/view.php?id=1" title="[нова] ee00ef6c-6181-4601-bf2a-9977b69e1d61">0000001</a></div><div id="nav-search" class="nav-search"><form class="form-search" method="post" action="/jump_to_bug.php"><span class="input-icon"><input type="text" name="bug_id" autocomplete="off" class="nav-search-input" placeholder="Проблема #"><i class="fa fa-search ace-icon nav-search-icon"></i></span></form></div>
+</div>
+  <div class="page-content">
+<div class="row">
+<div class="col-md-12 col-xs-12"><div class="widget-box widget-color-blue2"><div class="widget-header widget-header-small"><h4 class="widget-title lighter"><i class="fa fa-bars ace-icon"></i>Перегляд деталей проблеми</h4></div><div class="widget-body"><div class="widget-toolbox padding-8 clearfix noprint"><div class="btn-group pull-left"><a class="btn btn-primary btn-white btn-round btn-sm" href="#bugnotes">Перейти до коментарів</a><a class="btn btn-primary btn-white btn-round btn-sm" href="#history">Перейти до історії</a></div><div class="btn-group pull-right"></div></div><div class="widget-main no-padding"><div class="table-responsive"><table class="table table-bordered table-condensed"><tfoot><tr class="noprint"><td colspan="6"><div class="btn-group"><div class="pull-left padding-right-2"><form method="post" action="bug_monitor_add.php" class="form-inline">
+	<fieldset><input type="hidden" name="bug_monitor_add_token" value="20230604NpvEgku0u8wrj4U-ivboQg5g6PS9l7et">		<input type="hidden" name="bug_id" value="1">
+		<input type="submit" class="btn btn-primary btn-sm btn-white btn-round" value="Спостерігати">
+	</fieldset></form>
+</div><div class="pull-left padding-right-2"><form method="post" action="bug_report_page.php" class="form-inline">
+	<fieldset><input type="hidden" name="bug_report_page_token" value="20230604aQdxCofOnGYeG18QLw2U81mRgW0ukavd">		<input type="hidden" name="m_id" value="1">
+		<input type="submit" class="btn btn-primary btn-sm btn-white btn-round" value="Клонувати">
+	</fieldset></form>
+</div></div></td></tr></tfoot><tbody><tr class="bug-header"><th class="bug-id category" width="15%">Код</th><th class="bug-project category" width="20%">Проект</th><th class="bug-category category" width="15%">Категорія</th><th class="bug-view-status category" width="15%">Рівень доступу</th><th class="bug-date-submitted category" width="15%">Зареєстрована</th><th class="bug-last-modified category" width="20%">Змінена</th></tr><tr class="bug-header-data"><td class="bug-id">0000001</td><td class="bug-project">9cac3965-f283-43ce-8831-5a1e1518f50b</td><td class="bug-category">General</td><td class="bug-view-status">спільна</td><td class="bug-date-submitted">2023-06-04 16:56</td><td class="bug-last-modified">2023-06-04 16:56</td></tr><tr class="spacer"><td colspan="6"></td></tr><tr class="hidden"></tr><tr><th class="bug-reporter category">Хто повідомив</th><td class="bug-reporter"><a href="http://localhost/view_user_page.php?id=31063">0c21d740-5</a>&nbsp;</td><th class="bug-assigned-to category">Кому призначена</th><td class="bug-assigned-to"></td><td colspan="2">&nbsp;</td></tr><tr><th class="bug-priority category">Пріоритет</th><td class="bug-priority">нормальний</td><th class="bug-severity category">Серйозність</th><td class="bug-severity">незначна</td><th class="bug-reproducibility category">Відтворюваність</th><td class="bug-reproducibility">не пробував</td></tr><tr><th class="bug-status category">Статус</th><td class="bug-status"><i class="fa fa-square fa-status-box status-10-fg"></i> нова</td><th class="bug-resolution category">Резолюція</th><td class="bug-resolution">відкрита</td><td colspan="2">&nbsp;</td></tr><tr class="spacer"><td colspan="6"></td></tr><tr class="hidden"></tr><tr><th class="bug-summary category">Статистика</th><td class="bug-summary" colspan="5">0000001: ee00ef6c-6181-4601-bf2a-9977b69e1d61</td></tr><tr><th class="bug-description category">Опис</th><td class="bug-description" colspan="5">bc0b564f-8c9a-4b2a-9729-c3d5dcb69a6e</td></tr><tr><th class="bug-steps-to-reproduce category">Кроки для відтворення</th><td class="bug-steps-to-reproduce" colspan="5">e7f7c1b2-8441-4a6f-a075-6ad38ebc36c4</td></tr><tr><th class="bug-additional-information category">Додаткова інформація</th><td class="bug-additional-information" colspan="5">67a5f644-30e0-4aa1-8a49-50a68e588f45</td></tr><tr><th class="bug-tags category">Теги</th><td class="bug-tags" colspan="5">Нема прикріплених тегів.</td></tr><tr class="noprint"><th class="bug-attach-tags category">Прикріпити теги</th><td class="bug-attach-tags" colspan="5">	<form method="post" action="tag_attach.php" class="form-inline">
+	<input type="hidden" name="tag_attach_token" value="20230604b3QgVWIf49lz4BHjzwBgyXMZzivxatNT">	<input type="hidden" name="bug_id" value="1" class="input-sm">
+		<label class="inline small">
+		(Відокремлювати ',')	</label>
+	<input type="hidden" id="tag_separator" value=",">
+	<input type="text" name="tag_string" id="tag_string" class="input-sm" size="40" tabindex="1" value="">
+	<select class="input-sm" tabindex="2" name="tag_select" id="tag_select">
+		<option value="0">Наявні теги</option>	</select>
+	<input type="submit" value="Вкласти" class="btn btn-primary btn-sm btn-white btn-round">
+	</form>
+</td></tr><tr class="spacer"><td colspan="6"></td></tr><tr class="hidden"></tr></tbody></table></div></div></div></div></div>
+<div class="col-md-12 col-xs-12">
+<a id="attachments"></a>
+<a id="bugnotes"></a>
+<div class="space-10"></div>
+
+<div id="bugnotes" class="widget-box widget-color-blue2 ">
+<div class="widget-header widget-header-small">
+	<h4 class="widget-title lighter">
+		<i class="fa fa-comments ace-icon"></i>		Активність	</h4>
+	<div class="widget-toolbar">
+		<a data-action="collapse" href="#">
+			<i class="fa fa-chevron-up 1 ace-icon bigger-125"></i>		</a>
+	</div>
+	</div>
+	<div class="widget-body">
+	<div class="widget-main no-padding">
+	<div class="table-responsive">
+	<table class="table table-bordered table-condensed table-striped">
+<tbody><tr class="bugnotes-empty">
+	<td class="center" colspan="2">
+		До цієї проблеми немає коментарів.	</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-12 col-xs-12 noprint">
+<a id="addbugnote"></a>
+<div class="space-10"></div>
+
+<form id="bugnoteadd" method="post" action="bugnote_add.php" enctype="multipart/form-data">
+	<input type="hidden" name="bugnote_add_token" value="20230604-3P2xrUuiMCtXVDPNcCVfar16AuiHou6">	<input type="hidden" name="bug_id" value="1">
+	<div id="bugnote_add" class="widget-box widget-color-blue2 ">
+		<div class="widget-header widget-header-small">
+			<h4 class="widget-title lighter">
+				<i class="fa fa-comment ace-icon"></i>				Додання коментаря			</h4>
+			<div class="widget-toolbar">
+				<a data-action="collapse" href="#">
+					<i class="fa fa-chevron-up 1 ace-icon bigger-125"></i>				</a>
+			</div>
+		</div>
+
+		<div class="widget-body">
+		<div class="widget-main no-padding">
+
+		<div class="table-responsive">
+		<table class="table table-bordered table-condensed">
+		<tbody>
+
+			<tr>
+				<th class="category">
+					Рівень доступу				</th>
+				<td>
+				<label for="bugnote_add_view_status">
+					<input type="checkbox" class="ace" id="bugnote_add_view_status" name="private">
+					<span class="lbl padding-6">закрита</span>
+				</label>
+				</td>
+			</tr>
+
+			<tr>
+				<th class="category" width="15%">
+					Коментар				</th>
+				<td width="85%">
+					<textarea name="bugnote_text" id="bugnote_text" class="form-control" rows="7"></textarea>
+				</td>
+			</tr>
+
+			<tr id="bugnote-attach-files">
+				<th class="category">
+					Завантажити файли					<br>
+					<span class="small" title="Максимальний розмір: 5,242,880 байт">Максимальний розмір: 5,120 КиБ</span>				</th>
+				<td>
+						<div id="dropzone-preview-template" class="hidden">
+		<div class="dz-preview dz-file-preview">
+			<div class="dz-filename"><span data-dz-name=""></span></div>
+			<div><img data-dz-thumbnail=""></div>
+			<div class="dz-size" data-dz-size=""></div>
+			<div class="progress progress-small progress-striped active">
+				<div class="progress-bar progress-bar-success" data-dz-uploadprogress=""></div>
+			</div>
+			<div class="dz-success-mark"><span></span></div>
+			<div class="dz-error-mark"><span></span></div>
+			<div class="dz-error-message"><span data-dz-errormessage=""></span></div>
+		</div>
+	</div>
+						<input type="hidden" name="max_file_size" value="5242880">
+					<div class="dropzone center dz-clickable" data-force-fallback="false" data-max-filesize-bytes="5242880" data-max-filename-length="250" data-accepted-files="" data-default-message="Додайте файли перетягнувши їх, виберіть або вставте їх." data-fallback-message="Ваш браузер не підтримує завантаження файлів через просте перетягування." data-fallback-text="" data-file-too-big="Файл надто великий ({{filesize}} МіБ). Максимальний розмір файлу: {{maxFilesize}} МіБ." data-invalid-file-type="Ви не можете вантажити файли цього типу." data-response-error="Сервер відповів кодом {{statusCode}}." data-cancel-upload="Скасувати завантаження" data-cancel-upload-confirmation="Ви впевнені, що хочете скасувати це завантаження?" data-remove-file="Вилучити файл" data-remove-file-confirmation="" data-max-files-exceeded="Ви не можете завантажити більше файлів." data-dropzone-not-supported="Dropzone.js не підтримує старіших браузерів!" data-dropzone_multiple_files_too_big="Максимально допустимий розмір файлів ({{maxFilesize}} MiB) було перевищено для наступних файлів:{{files}}" data-dropzone_multiple_filenames_too_long="The following filenames are too long (max {{maxFilenameLength}} characters):{{files}}">
+						<i class="fa fa-cloud-upload upload-icon ace-icon blue fa-3x"></i>						<br>
+						<span class="bigger-150 grey">Додайте файли перетягнувши їх, виберіть або вставте їх.</span>
+						<div id="dropzone-previews-box" class="dz dropzone-previews dz-max-files-reached"></div>
+					</div>
+					
+				</td>
+			</tr>
+		</tbody>
+</table>
+</div>
+</div>
+	<div class="widget-toolbox padding-8 clearfix">
+		<input type="submit" class="btn btn-primary btn-white btn-round" value="Додати коментар">
+	</div>
+</div>
+</div>
+</form>
+</div>
+	<div class="col-md-12 col-xs-12">
+		<a id="history"></a>
+		<div class="space-10"></div>
+	
+		<div id="history" class="widget-box widget-color-blue2 ">
+	<div class="widget-header widget-header-small">
+		<h4 class="widget-title lighter">
+			<i class="fa fa-history ace-icon"></i>			Хронологія проблеми		</h4>
+		<div class="widget-toolbar">
+			<a data-action="collapse" href="#">
+				<i class="fa fa-chevron-up 1 ace-icon bigger-125"></i>			</a>
+		</div>
+	</div>
+	<div class="widget-body">
+	<div class="widget-main no-padding">
+	<div class="table-responsive">
+	<table class="table table-bordered table-condensed table-hover table-striped">
+		<thead>
+			<tr>
+				<th class="small-caption">
+					Дата				</th>
+				<th class="small-caption">
+					Користувач				</th>
+				<th class="small-caption">
+					Поле				</th>
+				<th class="small-caption">
+					Зміна				</th>
+			</tr>
+		</thead>
+	
+		<tbody>
+				<tr>
+				<td class="small-caption">
+					2023-06-04 16:56				</td>
+				<td class="small-caption">
+					<a href="http://localhost/view_user_page.php?id=31063">0c21d740-5</a>				</td>
+				<td class="small-caption">
+					Нова проблема				</td>
+				<td class="small-caption">
+									</td>
+			</tr>
+			</tbody>
+	</table>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="space-20"></div>
+<div class="footer noprint">
+<div class="footer-inner">
+<div class="footer-content">
+<div class="col-md-6 col-xs-12 no-padding">
+<address>
+<strong>Powered by <a href="https://www.mantisbt.org" title="bug tracking software">MantisBT </a></strong> <br>
+<small>Copyright © 2000 - 2023 MantisBT Team</small><br><small>Зв'яжіться з <a href="mailto:webmaster@example.com" title="Написати веб-майстру по ел. пошті">адміністратором</a> для отримання допомоги</small><br>
+</address>
+</div>
+<div class="col-md-6 col-xs-12">
+<div class="pull-right" id="powered-by-mantisbt-logo">
+<a href="https://www.mantisbt.org" title="Mantis Bug Tracker: a free and open source web based bug tracking system."><img src="/images/mantis_logo.png" width="102" height="35" alt="Powered by Mantis Bug Tracker: a free and open source web based bug tracking system."></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="btn-scroll-up btn btn-sm btn-inverse display" id="btn-scroll-up" href="#">
+<i class="fa fa-angle-double-up ace-icon icon-only bigger-110"></i>
+</a>
+</div>
+	<script type="text/javascript" src="/js/bootstrap-3.4.1.min.js"></script>
+	<script type="text/javascript" src="/js/moment-with-locales-2.29.4.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap-datetimepicker-4.17.47.min.js"></script>
+	<script type="text/javascript" src="/js/typeahead.jquery-1.3.0.min.js"></script>
+	<script type="text/javascript" src="/js/list-1.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/ace.min.js"></script>
+
+
+<input type="file" multiple="multiple" class="dz-hidden-input" accept="" style="visibility: hidden; position: absolute; top: 0px; left: 0px; height: 0px; width: 0px;"></body></html>

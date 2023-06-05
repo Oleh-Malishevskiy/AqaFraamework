@@ -19,7 +19,8 @@ public class HomePage extends BaseObject {
         super(driver);
     }
 
-    public ManagePage goToManagePage(){
+    public ManagePage goToManagePage() throws InterruptedException {
+        Thread.sleep(500);
         manageButton.myClick();
         return new ManagePage(driver);
     }

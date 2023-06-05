@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="3.943" tests="10" errors="0" skipped="9" failures="1">
+  <properties>
+    <property name="idea.version" value="2023.1.2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="17+35-2724"/>
+    <property name="sun.boot.library.path" value="C:\Users\Олег\.jdks\openjdk-17\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Олег\Documents\GitHub\AqaFraamework"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="UA"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Олег\Documents\GitHub\AqaFraamework"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="17+35-2724"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\08A4~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="maven.ext.class.path" value="D:\_avast_\IntelliJ IDEA Community Edition 2023.1.2\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="D:\_avast_\IntelliJ IDEA Community Edition 2023.1.2\plugins\maven\lib\maven3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Users\Олег\.jdks\openjdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\msys64\mingw64\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\nodejs\;D:\_avast_\apache-maven-3.9.2\bin;%AllureE%\bin;C:\Program Files\Git\cmd;C:\Users\Олег\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\Scripts;C:\Users\Олег\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Program Files\Azure Data Studio\bin;C:\Users\Олег\.dotnet\tools;C:\Users\Олег\AppData\Local\GitHubDesktop\bin;C:\msys64\mingw32\bin;C:\Users\Олег\AppData\Roaming\npm;D:\_avast_\IntelliJ IDEA Community Edition 2023.1.2\bin;;."/>
+    <property name="jansi.passthrough" value="true"/>
+    <property name="maven.conf" value="D:\_avast_\IntelliJ IDEA Community Edition 2023.1.2\plugins\maven\lib\maven3/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\Олег"/>
+    <property name="user.timezone" value="Europe/Kiev"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="user.name" value="Oleg"/>
+    <property name="java.class.path" value="D:\_avast_\IntelliJ IDEA Community Edition 2023.1.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;D:\_avast_\IntelliJ IDEA Community Edition 2023.1.2\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2023.1.2 org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test"/>
+    <property name="java.home" value="C:\Users\Олег\.jdks\openjdk-17"/>
+    <property name="user.language" value="uk"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="17"/>
+    <property name="native.encoding" value="Cp1251"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\_avast_\IntelliJ IDEA Community Edition 2023.1.2\plugins\maven\lib\maven3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2021-09-14"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="setDriver" classname="webUITest.TestObject" time="0.74">
+    <failure message="&#10;Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @BeforeMethod annotated setDriver.&#10;For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection" type="org.testng.TestNGException"><![CDATA[org.testng.TestNGException: 
+
+Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @BeforeMethod annotated setDriver.
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+]]></failure>
+    <system-out><![CDATA[2023-06-04 18:29:21 INFO  CustomSuiteListener:12 - ParallelSuite START
+2023-06-04 18:29:21 INFO  CustomTestListener:50 - ParallelTest onStart
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="setDriver" classname="webUITest.TestObject" time="0">
+    <skipped/>
+    <system-out><![CDATA[2023-06-04 18:29:21 INFO  CustomTestListener:32 - CreateProblemRoute onTestSkipped
+]]></system-out>
+  </testcase>
+  <testcase name="setDriver" classname="webUITest.TestObject" time="0">
+    <skipped/>
+    <system-out><![CDATA[2023-06-04 18:29:21 INFO  CustomTestListener:32 - CreateProblemRoute onTestSkipped
+]]></system-out>
+  </testcase>
+  <testcase name="setDriver" classname="webUITest.TestObject" time="0">
+    <skipped/>
+    <system-out><![CDATA[2023-06-04 18:29:21 INFO  CustomTestListener:32 - CreateProblemRoute onTestSkipped
+]]></system-out>
+  </testcase>
+  <testcase name="setDriver" classname="webUITest.TestObject" time="0">
+    <skipped/>
+    <system-out><![CDATA[2023-06-04 18:29:21 INFO  CustomTestListener:32 - CreateProblemRoute onTestSkipped
+]]></system-out>
+  </testcase>
+  <testcase name="CreateProblemRoute" classname="webUITest.TestObject" time="0">
+    <skipped message="&#10;Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @BeforeMethod annotated setDriver.&#10;For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection"/>
+    <system-out><![CDATA[2023-06-04 18:29:21 INFO  CustomTestListener:14 - CreateProblemRoute onTestStart
+]]></system-out>
+  </testcase>
+  <testcase name="CreateProblemRoute" classname="webUITest.TestObject" time="0">
+    <skipped message="&#10;Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @BeforeMethod annotated setDriver.&#10;For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection"/>
+    <system-out><![CDATA[2023-06-04 18:29:21 INFO  CustomTestListener:14 - CreateProblemRoute onTestStart
+]]></system-out>
+  </testcase>
+  <testcase name="CreateProblemRoute" classname="webUITest.TestObject" time="0">
+    <skipped message="&#10;Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @BeforeMethod annotated setDriver.&#10;For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection"/>
+    <system-out><![CDATA[2023-06-04 18:29:21 INFO  CustomTestListener:14 - CreateProblemRoute onTestStart
+]]></system-out>
+  </testcase>
+  <testcase name="CreateProblemRoute" classname="webUITest.TestObject" time="0">
+    <skipped message="&#10;Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @BeforeMethod annotated setDriver.&#10;For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection"/>
+    <system-out><![CDATA[2023-06-04 18:29:21 INFO  CustomTestListener:14 - CreateProblemRoute onTestStart
+]]></system-out>
+  </testcase>
+  <testcase name="CreateProblemRoute" classname="webUITest.TestObject" time="0">
+    <skipped message="&#10;Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @BeforeMethod annotated setDriver.&#10;For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection"/>
+    <system-out><![CDATA[2023-06-04 18:29:21 INFO  CustomTestListener:14 - CreateProblemRoute onTestStart
+]]></system-out>
+  </testcase>
+</testsuite>

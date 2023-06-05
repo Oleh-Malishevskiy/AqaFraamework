@@ -1,5 +1,6 @@
 package webUI.pageObject;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,17 +17,16 @@ public class CreateProblemPage extends BaseObject {
     private MyButton selectUser;
     @FindBy(xpath ="/html/body/div[2]/div[2]/div[2]/div/div/form/div/div[2]/div[1]/div/table/tbody/tr[6]/td/select/option[2]")
     private MyButton chooseUser;
-    @FindBy(xpath ="/html/body/div[2]/div[2]/div[2]/div/div/form/div/div[2]/div[1]/div/table/tbody/tr[7]/td/input")
+    @FindBy(xpath ="//*[@id=\"summary\"]")
     private MyInput writeStaticInfo;
-    @FindBy(xpath ="/html/body/div[2]/div[2]/div[2]/div/div/form/div/div[2]/div[1]/div/table/tbody/tr[8]/td/textarea")
+    @FindBy(xpath ="//*[@id=\"description\"]")
     private MyInput description;
-    @FindBy(xpath ="/html/body/div[2]/div[2]/div[2]/div/div/form/div/div[2]/div[1]/div/table/tbody/tr[9]/td/textarea")
+    @FindBy(xpath ="//*[@id=\"steps_to_reproduce\"]")
     private MyInput steps;
-    @FindBy(xpath ="/html/body/div[2]/div[2]/div[2]/div/div/form/div/div[2]/div[1]/div/table/tbody/tr[10]/td/textarea")
+    @FindBy(xpath ="//*[@id=\"additional_info\"]")
     private MyInput addInfo;
     @FindBy(xpath ="//*[@id=\"report_bug_form\"]/div/div[2]/div[2]/input")
     private MyButton createProblemBtn;
-
     public CreateProblemPage(WebDriver driver) {
         super(driver);
 

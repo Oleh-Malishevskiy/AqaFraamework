@@ -1,0 +1,325 @@
+<html><head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="robots" content="noindex,follow">
+	<title>Нова проблема - MantisBT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/default.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/status_config.php?cache_key=d23ebc2da81b91be8530cd5d014728d4">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/dropzone-5.5.0.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/bootstrap-3.4.1.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/font-awesome-4.7.0.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/bootstrap-datetimepicker-4.17.47.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/ace.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/ace-mantis.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/ace-skins.min.css">
+
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: повнотекстовий пошук" href="http://localhost/browser_search_plugin.php?type=text">
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: пошук за ідентифікатором проблеми" href="http://localhost/browser_search_plugin.php?type=id">
+	<script type="text/javascript" src="/javascript_config.php?cache_key=d23ebc2da81b91be8530cd5d014728d4"></script>
+	<script type="text/javascript" src="/javascript_translations.php?cache_key=17dafd49333a73d719b2f6092aa4545a"></script>
+	<script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="/js/dropzone-5.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body class="skin-3">
+<style>
+* { font-family: "Open Sans"; } 
+h1, h2, h3, h4, h5 { font-family: "Open Sans"; } 
+</style>
+<div id="navbar" class="navbar navbar-default navbar-collapse navbar-fixed-top noprint"><div id="navbar-container" class="navbar-container"><button id="menu-toggler" type="button" class="navbar-toggle menu-toggler pull-left hidden-lg hidden-md" data-target="#sidebar"><span class="sr-only">Toggle sidebar</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="navbar-header"><a href="/my_view_page.php" class="navbar-brand"><span class="smaller-75"> MantisBT </span></a><button type="button" class="navbar-toggle navbar-toggle collapsed pull-right hidden-sm hidden-md hidden-lg" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu"><span class="sr-only">Toggle user menu</span><i class="fa fa-user ace-icon fa-2x white"></i> </button></div><div class="navbar-buttons navbar-header navbar-collapse collapse"><ul class="nav ace-nav">
+<li class="grey" id="dropdown_projects_menu">
+<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+&nbsp;9cac3965-f283-43ce-8831-5a1e1518f50b&nbsp;
+<i class="fa fa-angle-down ace-icon bigger-110"></i>
+</a>
+<ul id="projects-list" class=" dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close">
+<li><div class="projects-searchbox" style="display: none;"><input class="search form-control input-md" placeholder="Знайти"></div></li>
+<li class="divider"></li>
+<li><div class="scrollable-menu">
+<ul class="list dropdown-yellow no-margin"><li><a class="project-link" href="/set_project.php?project_id=0">Всі проекти</a></li><li class="divider"></li><li class="active"><a class="project-link" href="/set_project.php?project_id=2">9cac3965-f283-43ce-8831-5a1e1518f50b</a></li><li><a class="project-link" href="/set_project.php?project_id=1">f27cb59e-3651-4be1-b0e4-99a14685476f</a></li></ul>
+</div>
+</li>
+</ul>
+</li>
+<li class="grey"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-user ace-icon fa-2x white"></i> <span class="user-info">0c21d740-5</span><i class="fa fa-angle-down ace-icon"></i></a><ul class="user-menu dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close"><li><a href="/account_page.php"><i class="fa fa-user ace-icon"></i> Мій запис</a></li><li><a href="http://localhost/issues_rss.php?username=0c21d740-5&amp;key=7JBSGuf8rS3_nEVO19EF_n-4v2MJxsCDDl3IADF-eW3Y9BbxGQa6FbecPTNs3yv806i4AvNM5r-grOhxGtDD&amp;project_id=2"><i class="fa fa-rss-square orange ace-icon"></i> RSS</a></li><li class="divider"></li><li><a href="/logout_page.php"><i class="fa fa-sign-out ace-icon"></i> Вийти</a></li></ul></li></ul></div></div></div><div class="main-container" id="main-container" style="padding-top: 45px;">
+<div id="sidebar" class="sidebar sidebar-fixed responsive compact "><ul class="nav nav-list"><li>
+<a href="/my_view_page.php">
+<i class="fa fa-dashboard menu-icon"></i>
+<span class="menu-text"> Моя сторінка </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/view_all_bug_page.php">
+<i class="fa fa-list-alt menu-icon"></i>
+<span class="menu-text"> Браузер проблем </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li class="active">
+<a href="/bug_report_page.php">
+<i class="fa fa-edit menu-icon"></i>
+<span class="menu-text"> Нова проблема </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/changelog_page.php">
+<i class="fa fa-retweet menu-icon"></i>
+<span class="menu-text"> Хронологія </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/roadmap_page.php">
+<i class="fa fa-road menu-icon"></i>
+<span class="menu-text"> Дорожня карта </span>
+</a>
+<b class="arrow"></b>
+</li>
+</ul><div id="sidebar-btn" class="sidebar-toggle sidebar-collapse"><i data-icon2="ace-icon fa fa-angle-double-right" data-icon1="ace-icon fa fa-angle-double-left" class="ace-icon fa fa-angle-double-left"></i></div></div><div class="main-content">
+<div id="breadcrumbs" class="breadcrumbs noprint">
+<ul class="breadcrumb">
+  <li><i class="fa fa-user home-icon active"></i>  <a href="/account_page.php">0c21d740-5 ( administrator ) </a>
+  <span class="label hidden-xs label-default arrowed">Репортер</span></li>
+</ul>
+<div id="nav-search" class="nav-search"><form class="form-search" method="post" action="/jump_to_bug.php"><span class="input-icon"><input type="text" name="bug_id" autocomplete="off" class="nav-search-input" placeholder="Проблема #"><i class="fa fa-search ace-icon nav-search-icon"></i></span></form></div>
+</div>
+  <div class="page-content">
+<div class="row">
+<div class="col-md-12 col-xs-12">
+<form id="report_bug_form" method="post" enctype="multipart/form-data" action="bug_report.php">
+<input type="hidden" name="bug_report_token" value="20230604vLksYYUS8biWgtbYOSOLHkM2RrUmtn2L"><input type="hidden" name="m_id" value="0">
+<input type="hidden" name="project_id" value="2">
+<div class="widget-box widget-color-blue2">
+	<div class="widget-header widget-header-small">
+		<h4 class="widget-title lighter">
+				<i class="fa fa-edit ace-icon"></i>				Введіть деталі щодо проблеми		</h4>
+	</div>
+<div class="widget-body dz-clickable">
+<div class="widget-main no-padding">
+<div class="table-responsive">
+<table class="table table-bordered table-condensed">
+	<tbody><tr>
+		<th class="category" width="30%">
+			<span class="required">*</span> <label for="category_id">Категорія</label>		</th>
+		<td width="70%">
+						<select id="category_id" name="category_id" class="autofocus input-sm" tabindex="1" required="">
+				<option value="1" selected="selected">[Всі проекти] General</option>
+			</select>
+		</td>
+	</tr>
+
+	<tr>
+		<th class="category">
+			<label for="reproducibility">Відтворюваність</label>
+		</th>
+		<td>
+			<select tabindex="2" id="reproducibility" name="reproducibility" class="input-sm">
+				<option value="10">завжди</option><option value="30">іноді</option><option value="50">випадково</option><option value="70" selected="selected">не пробував</option><option value="90">не можу відтворити</option><option value="100">не визначено</option>			</select>
+		</td>
+	</tr>
+	<tr>
+		<th class="category">
+			<label for="severity">Серйозність</label>
+		</th>
+		<td>
+			<select tabindex="3" id="severity" name="severity" class="input-sm">
+				<option value="10">побажання</option><option value="20">банальна</option><option value="30">текст</option><option value="40">доводка</option><option value="50" selected="selected">незначна</option><option value="60">значна</option><option value="70">спричиняє до аварії</option><option value="80">блокуюча</option>			</select>
+		</td>
+	</tr>
+	<tr>
+		<th class="category">
+			<label for="priority">Пріоритет</label>
+		</th>
+		<td>
+			<select tabindex="4" id="priority" name="priority" class="input-sm">
+				<option value="10">немає</option><option value="20">низький</option><option value="30" selected="selected">нормальний</option><option value="40">високий</option><option value="50">терміново</option><option value="60">невідкладно</option>			</select>
+		</td>
+	</tr>
+	<tr>
+		<th class="category">
+			<label for="profile_id">Виберіть шаблон</label>
+		</th>
+		<td>
+						
+<div id="profile_open" class=" collapse-closed noprint" style="display: none;">			або заповніть&nbsp;&nbsp;<a id="profile_open_link" class="collapse-link noprint"><i class="fa fa-chevron-up bigger-120" title="-"></i></a>			<table class="table-bordered table-condensed">
+				<tbody><tr>
+					<th class="category" width="30%">
+						<label for="platform">Платформа</label>
+					</th>
+					<td>
+						<span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text" class="typeahead input-sm tt-hint" autocomplete="off" size="32" maxlength="32" tabindex="-1" value="" readonly="" spellcheck="false" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"><input type="text" id="platform" name="platform" class="typeahead input-sm tt-input" autocomplete="off" size="32" maxlength="32" tabindex="5" value="" spellcheck="false" dir="auto" aria-activedescendant="" aria-owns="platform_listbox" role="combobox" aria-readonly="true" aria-autocomplete="list" style="position: relative; vertical-align: top; background-color: transparent;"><span role="status" aria-live="polite" style="position: absolute; padding: 0px; border: 0px; height: 1px; width: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap;"></span><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div role="listbox" class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div role="presentation" class="tt-dataset tt-dataset-0"></div></div></span>					</td>
+				</tr>
+				<tr>
+					<th class="category">
+						<label for="os">ОС</label>
+					</th>
+					<td>
+						<span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text" class="typeahead input-sm tt-hint" autocomplete="off" size="32" maxlength="32" tabindex="-1" value="" readonly="" spellcheck="false" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"><input type="text" id="os" name="os" class="typeahead input-sm tt-input" autocomplete="off" size="32" maxlength="32" tabindex="6" value="" spellcheck="false" dir="auto" aria-activedescendant="" aria-owns="os_listbox" role="combobox" aria-readonly="true" aria-autocomplete="list" style="position: relative; vertical-align: top; background-color: transparent;"><span role="status" aria-live="polite" style="position: absolute; padding: 0px; border: 0px; height: 1px; width: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap;"></span><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div role="listbox" class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div role="presentation" class="tt-dataset tt-dataset-1"></div></div></span>					</td>
+				</tr>
+				<tr>
+					<th class="category">
+						<label for="os_build">Версія</label>
+					</th>
+					<td>
+						<span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text" class="typeahead input-sm tt-hint" autocomplete="off" size="16" maxlength="16" tabindex="-1" value="" readonly="" spellcheck="false" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"><input type="text" id="os_build" name="os_build" class="typeahead input-sm tt-input" autocomplete="off" size="16" maxlength="16" tabindex="7" value="" spellcheck="false" dir="auto" aria-activedescendant="" aria-owns="os_build_listbox" role="combobox" aria-readonly="true" aria-autocomplete="list" style="position: relative; vertical-align: top; background-color: transparent;"><span role="status" aria-live="polite" style="position: absolute; padding: 0px; border: 0px; height: 1px; width: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap;"></span><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div role="listbox" class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div role="presentation" class="tt-dataset tt-dataset-2"></div></div></span>					</td>
+				</tr>
+			</tbody></table>
+			</div>
+<div id="profile_closed" class="collapse-section-closed  collapse-open">			або заповніть&nbsp;&nbsp;<a id="profile_closed_link" class="collapse-link noprint"><i class="fa fa-chevron-down bigger-120" title="+"></i></a>			</div>		</td>
+	</tr>
+
+
+
+
+
+	<tr>
+		<th class="category">
+			<span class="required">*</span><label for="summary">Статистика</label>
+		</th>
+		<td>
+			<input tabindex="8" type="text" id="summary" name="summary" size="105" maxlength="128" value="" required="">
+		</td>
+	</tr>
+	<tr>
+		<th class="category">
+			<span class="required">*</span><label for="description">Опис</label>
+		</th>
+		<td>
+						<textarea class="form-control" tabindex="9" id="description" name="description" cols="80" rows="10" required=""></textarea>
+		</td>
+	</tr>
+
+		<tr>
+			<th class="category">
+				<label for="steps_to_reproduce">Кроки для відтворення</label>
+			</th>
+			<td>
+								<textarea class="form-control" tabindex="10" id="steps_to_reproduce" name="steps_to_reproduce" cols="80" rows="10"></textarea>
+			</td>
+		</tr>
+
+	<tr>
+		<th class="category">
+			<label for="additional_info">Додаткова інформація</label>
+		</th>
+		<td>
+						<textarea class="form-control" tabindex="11" id="additional_info" name="additional_info" cols="80" rows="10"></textarea>
+		</td>
+	</tr>
+	<tr>
+		<th class="category">
+			<label for="attach_tag">Прикріпити теги</label>
+		</th>
+		<td>
+				<label class="inline small">
+		(Відокремлювати ',')	</label>
+	<input type="hidden" id="tag_separator" value=",">
+	<input type="text" name="tag_string" id="tag_string" class="input-sm" size="40" tabindex="12" value="">
+	<select class="input-sm" tabindex="13" name="tag_select" id="tag_select">
+		<option value="0">Наявні теги</option>	</select>
+		</td>
+	</tr>
+	<tr>
+		<th class="category">
+			<label for="ufile[]">Завантажити файли</label>
+			<br>
+			<span class="small" title="Максимальний розмір: 5,242,880 байт">Максимальний розмір: 5,120 КиБ</span>		</th>
+		<td>
+				<div id="dropzone-preview-template" class="hidden">
+		<div class="dz-preview dz-file-preview">
+			<div class="dz-filename"><span data-dz-name=""></span></div>
+			<div><img data-dz-thumbnail=""></div>
+			<div class="dz-size" data-dz-size=""></div>
+			<div class="progress progress-small progress-striped active">
+				<div class="progress-bar progress-bar-success" data-dz-uploadprogress=""></div>
+			</div>
+			<div class="dz-success-mark"><span></span></div>
+			<div class="dz-error-mark"><span></span></div>
+			<div class="dz-error-message"><span data-dz-errormessage=""></span></div>
+		</div>
+	</div>
+				<input type="hidden" name="max_file_size" value="5242880">
+			<div class="dropzone center dz-clickable" data-force-fallback="false" data-max-filesize-bytes="5242880" data-max-filename-length="250" data-accepted-files="" data-default-message="Додайте файли перетягнувши їх, виберіть або вставте їх." data-fallback-message="Ваш браузер не підтримує завантаження файлів через просте перетягування." data-fallback-text="" data-file-too-big="Файл надто великий ({{filesize}} МіБ). Максимальний розмір файлу: {{maxFilesize}} МіБ." data-invalid-file-type="Ви не можете вантажити файли цього типу." data-response-error="Сервер відповів кодом {{statusCode}}." data-cancel-upload="Скасувати завантаження" data-cancel-upload-confirmation="Ви впевнені, що хочете скасувати це завантаження?" data-remove-file="Вилучити файл" data-remove-file-confirmation="" data-max-files-exceeded="Ви не можете завантажити більше файлів." data-dropzone-not-supported="Dropzone.js не підтримує старіших браузерів!" data-dropzone_multiple_files_too_big="Максимально допустимий розмір файлів ({{maxFilesize}} MiB) було перевищено для наступних файлів:{{files}}" data-dropzone_multiple_filenames_too_long="The following filenames are too long (max {{maxFilenameLength}} characters):{{files}}">
+				<i class="fa fa-cloud-upload upload-icon ace-icon blue fa-3x"></i>				<br>
+				<span class="bigger-150 grey">Додайте файли перетягнувши їх, виберіть або вставте їх.</span>
+				<div id="dropzone-previews-box" class="dropzone-previews dz-max-files-reached"></div>
+			</div>
+			
+		</td>
+	</tr>
+
+	<tr>
+		<th class="category">
+			Рівень доступу		</th>
+		<td>
+			<label>
+				<input tabindex="15" type="radio" class="ace" name="view_state" value="10" checked="checked">
+				<span class="lbl padding-6">спільна</span>
+			</label>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<label>
+				<input tabindex="16" type="radio" class="ace" name="view_state" value="50">
+				<span class="lbl padding-6">закрита</span>
+			</label>
+		</td>
+	</tr>
+	<tr>
+		<th class="category">
+			Продовжити оформлення звітів		</th>
+		<td>
+			<label>
+				<input tabindex="17" type="checkbox" class="ace" id="report_stay" name="report_stay">
+				<span class="lbl padding-6">увімкніть, якщо оформляєте декілька проблем</span>
+			</label>
+		</td>
+	</tr>
+</tbody></table>
+</div>
+</div>
+<div class="widget-toolbox padding-8 clearfix">
+	<span class="required pull-right"> * обов'язкове поле</span>
+	<input tabindex="18" type="submit" class="btn btn-primary btn-white btn-round" value="Надіслати звіт">
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="space-20"></div>
+<div class="footer noprint">
+<div class="footer-inner">
+<div class="footer-content">
+<div class="col-md-6 col-xs-12 no-padding">
+<address>
+<strong>Powered by <a href="https://www.mantisbt.org" title="bug tracking software">MantisBT </a></strong> <br>
+<small>Copyright © 2000 - 2023 MantisBT Team</small><br><small>Зв'яжіться з <a href="mailto:webmaster@example.com" title="Написати веб-майстру по ел. пошті">адміністратором</a> для отримання допомоги</small><br>
+</address>
+</div>
+<div class="col-md-6 col-xs-12">
+<div class="pull-right" id="powered-by-mantisbt-logo">
+<a href="https://www.mantisbt.org" title="Mantis Bug Tracker: a free and open source web based bug tracking system."><img src="/images/mantis_logo.png" width="102" height="35" alt="Powered by Mantis Bug Tracker: a free and open source web based bug tracking system."></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="btn-scroll-up btn btn-sm btn-inverse display" id="btn-scroll-up" href="#">
+<i class="fa fa-angle-double-up ace-icon icon-only bigger-110"></i>
+</a>
+</div>
+	<script type="text/javascript" src="/js/bootstrap-3.4.1.min.js"></script>
+	<script type="text/javascript" src="/js/moment-with-locales-2.29.4.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap-datetimepicker-4.17.47.min.js"></script>
+	<script type="text/javascript" src="/js/typeahead.jquery-1.3.0.min.js"></script>
+	<script type="text/javascript" src="/js/list-1.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/ace.min.js"></script>
+
+
+<input type="file" multiple="multiple" class="dz-hidden-input" accept="" style="visibility: hidden; position: absolute; top: 0px; left: 0px; height: 0px; width: 0px;"></body></html>

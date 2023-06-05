@@ -1,0 +1,457 @@
+<html><head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Статистика - MantisBT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/default.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/status_config.php?cache_key=aa1f2a23a907e5ec5c9ef47830e8b025">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/dropzone-5.5.0.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/bootstrap-3.4.1.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/font-awesome-4.7.0.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/bootstrap-datetimepicker-4.17.47.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/ace.min.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/ace-mantis.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/css/ace-skins.min.css">
+
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: повнотекстовий пошук" href="http://localhost/browser_search_plugin.php?type=text">
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: пошук за ідентифікатором проблеми" href="http://localhost/browser_search_plugin.php?type=id">
+	<script type="text/javascript" src="/javascript_config.php?cache_key=aa1f2a23a907e5ec5c9ef47830e8b025"></script>
+	<script type="text/javascript" src="/javascript_translations.php?cache_key=17dafd49333a73d719b2f6092aa4545a"></script>
+	<script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="/js/dropzone-5.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body class="skin-3">
+<style>
+* { font-family: "Open Sans"; } 
+h1, h2, h3, h4, h5 { font-family: "Open Sans"; } 
+</style>
+<div id="navbar" class="navbar navbar-default navbar-collapse navbar-fixed-top noprint"><div id="navbar-container" class="navbar-container"><button id="menu-toggler" type="button" class="navbar-toggle menu-toggler pull-left hidden-lg hidden-md" data-target="#sidebar"><span class="sr-only">Toggle sidebar</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="navbar-header"><a href="/my_view_page.php" class="navbar-brand"><span class="smaller-75"> MantisBT </span></a><button type="button" class="navbar-toggle navbar-toggle collapsed pull-right hidden-sm hidden-md hidden-lg" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu"><span class="sr-only">Toggle user menu</span><i class="fa fa-user ace-icon fa-2x white"></i> </button></div><div class="navbar-buttons navbar-header navbar-collapse collapse"><ul class="nav ace-nav"><li class="hidden-sm hidden-xs"><div class="btn-group btn-corner padding-right-8 padding-left-8"><a class="btn btn-primary btn-sm" href="bug_report_page.php"><i class="fa fa-edit "></i> Нова проблема</a><a class="btn btn-primary btn-sm" href="manage_user_create_page.php"><i class="fa fa-user-plus "></i> Запросити користувачів</a></div></li>
+<li class="grey" id="dropdown_projects_menu">
+<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+&nbsp;Всі проекти&nbsp;
+<i class="fa fa-angle-down ace-icon bigger-110"></i>
+</a>
+<ul id="projects-list" class=" dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close">
+<li><div class="projects-searchbox" style="display: none;"><input class="search form-control input-md" placeholder="Знайти"></div></li>
+<li class="divider"></li>
+<li><div class="scrollable-menu">
+<ul class="list dropdown-yellow no-margin"><li><a class="project-link" href="/set_project.php?project_id=0">Всі проекти</a></li><li class="divider"></li><li><a class="project-link" href="/set_project.php?project_id=1">f27cb59e-3651-4be1-b0e4-99a14685476f</a></li></ul>
+</div>
+</li>
+</ul>
+</li>
+<li class="grey"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-user ace-icon fa-2x white"></i> <span class="user-info">administrator</span><i class="fa fa-angle-down ace-icon"></i></a><ul class="user-menu dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close"><li><a href="/account_page.php"><i class="fa fa-user ace-icon"></i> Мій запис</a></li><li><a href="http://localhost/issues_rss.php?username=administrator&amp;key=5dWBHqN2-NnMxiEn__N-wvHKX0-ruQxMKoLs6KqDcYauf6e_vVx8ypqjHfzxFJAHPs7vmwlw_jhSxC7MPNjs"><i class="fa fa-rss-square orange ace-icon"></i> RSS</a></li><li class="divider"></li><li><a href="/logout_page.php"><i class="fa fa-sign-out ace-icon"></i> Вийти</a></li></ul></li></ul></div></div></div><div class="main-container" id="main-container" style="padding-top: 45px;">
+<div id="sidebar" class="sidebar sidebar-fixed responsive compact "><ul class="nav nav-list"><li>
+<a href="/my_view_page.php">
+<i class="fa fa-dashboard menu-icon"></i>
+<span class="menu-text"> Моя сторінка </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/view_all_bug_page.php">
+<i class="fa fa-list-alt menu-icon"></i>
+<span class="menu-text"> Браузер проблем </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/bug_report_page.php">
+<i class="fa fa-edit menu-icon"></i>
+<span class="menu-text"> Нова проблема </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/changelog_page.php">
+<i class="fa fa-retweet menu-icon"></i>
+<span class="menu-text"> Хронологія </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/roadmap_page.php">
+<i class="fa fa-road menu-icon"></i>
+<span class="menu-text"> Дорожня карта </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li class="active">
+<a href="/summary_page.php">
+<i class="fa fa-bar-chart-o menu-icon"></i>
+<span class="menu-text"> Статистика </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/manage_overview_page.php">
+<i class="fa fa-gears menu-icon"></i>
+<span class="menu-text"> Управління </span>
+</a>
+<b class="arrow"></b>
+</li>
+</ul><div id="sidebar-btn" class="sidebar-toggle sidebar-collapse"><i data-icon2="ace-icon fa fa-angle-double-right" data-icon1="ace-icon fa fa-angle-double-left" class="ace-icon fa fa-angle-double-left"></i></div></div><div class="main-content">
+<div id="breadcrumbs" class="breadcrumbs noprint">
+<ul class="breadcrumb">
+  <li><i class="fa fa-user home-icon active"></i>  <a href="/account_page.php">administrator</a>
+  <span class="label hidden-xs label-default arrowed">Адміністратор</span></li>
+</ul>
+<div id="nav-search" class="nav-search"><form class="form-search" method="post" action="/jump_to_bug.php"><span class="input-icon"><input type="text" name="bug_id" autocomplete="off" class="nav-search-input" placeholder="Проблема #"><i class="fa fa-search ace-icon nav-search-icon"></i></span></form></div>
+</div>
+  <div class="page-content">
+<div class="row">
+<ul class="nav nav-tabs padding-18">
+<li class="active"><a href="/summary_page.php">Статистика</a></li>
+</ul>
+
+<div class="col-md-12 col-xs-12">
+<div class="space-10"></div>
+
+<div class="widget-box widget-color-blue2">
+<div class="widget-header widget-header-small">
+	<h4 class="widget-title lighter">
+		<i class="fa fa-bar-chart-o ace-icon"></i>		Статистика	</h4>
+</div>
+
+<div class="widget-body">
+<div class="widget-main no-padding">
+
+
+<!-- LEFT COLUMN -->
+<div class="col-md-6 col-xs-12">
+
+	<!-- BY PROJECT -->
+	<div class="space-10"></div>
+	<div class="widget-box table-responsive">
+		<table class="table table-hover table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th class="width-35">За проектами</th>
+				<th class="align-right">відкриті</th><th class="align-right">вирішені</th><th class="align-right">закриті</th><th class="align-right">усього</th><th class="align-right">коефіціент вирішених</th><th class="align-right">коефіцієнт</th>			</tr>
+		</thead>
+		<tbody><tr><td class="width50">f27cb59e-3651-4be1-b0e4-99a14685476f</td><td class="width12 align-right">0</td><td class="width12 align-right">0</td><td class="width12 align-right">0</td><td class="width12 align-right">0</td><td class="width12 align-right">0.0%</td><td class="width12 align-right">0.0%</td></tr>	</tbody></table>
+	</div>
+
+	<!-- BY STATUS -->
+	<div class="space-10"></div>
+	<div class="widget-box table-responsive">
+		<table class="table table-hover table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th class="width-35">За статусами</th>
+				<th class="align-right">відкриті</th><th class="align-right">вирішені</th><th class="align-right">закриті</th><th class="align-right">усього</th><th class="align-right">коефіціент вирішених</th><th class="align-right">коефіцієнт</th>			</tr>
+		</thead>
+			</table>
+	</div>
+
+	<!-- BY SEVERITY -->
+	<div class="space-10"></div>
+	<div class="widget-box table-responsive">
+		<table class="table table-hover table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th class="width-35">За рівнями серйозності</th>
+				<th class="align-right">відкриті</th><th class="align-right">вирішені</th><th class="align-right">закриті</th><th class="align-right">усього</th><th class="align-right">коефіціент вирішених</th><th class="align-right">коефіцієнт</th>			</tr>
+		</thead>
+			</table>
+	</div>
+
+	<!-- BY CATEGORY -->
+	<div class="space-10"></div>
+	<div class="widget-box table-responsive">
+		<table class="table table-hover table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th class="width-35">За категоріями</th>
+				<th class="align-right">відкриті</th><th class="align-right">вирішені</th><th class="align-right">закриті</th><th class="align-right">усього</th><th class="align-right">коефіціент вирішених</th><th class="align-right">коефіцієнт</th>			</tr>
+		</thead>
+			</table>
+	</div>
+
+	<!-- TIME STATS -->
+	<div class="space-10"></div>
+	<div class="widget-box table-responsive">
+		<table class="table table-hover table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th colspan="2">Часова статистика вирішених проблем (у днях)</th>
+			</tr>
+		</thead>
+		<tbody><tr>
+			<td>Найдовше відкрита проблема</td>
+			<td class="align-right"></td>
+		</tr>
+		<tr>
+			<td>Відкрита протягом</td>
+			<td class="align-right">0.00</td>
+		</tr>
+		<tr>
+			<td>Середній час</td>
+			<td class="align-right">0.00</td>
+		</tr>
+		<tr>
+			<td>Загальний час</td>
+			<td class="align-right">0.00</td>
+		</tr>
+	</tbody></table>
+	</div>
+
+	<!-- DEVELOPER STATS -->
+	<div class="space-10"></div>
+	<div class="widget-box table-responsive">
+		<table class="table table-hover table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th>Статистика розробників</th>
+				<th class="align-right">відкриті</th><th class="align-right">вирішені</th><th class="align-right">закриті</th><th class="align-right">усього</th><th class="align-right">коефіціент вирішених</th><th class="align-right">коефіцієнт</th>			</tr>
+		</thead>
+			</table>
+</div>
+</div>
+
+<!-- RIGHT COLUMN -->
+<div class="col-md-6 col-xs-12">
+
+	<!-- BY DATE -->
+	<div class="space-10"></div>
+	<div class="widget-box table-responsive">
+		<table class="table table-hover table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th class="width-35">За датами (у днях)</th>
+				<th class="align-right">Відкрито</th>
+				<th class="align-right">Вирішено</th>
+				<th class="align-right">Баланс</th>
+			</tr>
+		</thead>
+		<tbody><tr>
+    <td class="width50">1</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+</tr>
+<tr>
+    <td class="width50">2</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+</tr>
+<tr>
+    <td class="width50">3</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+</tr>
+<tr>
+    <td class="width50">7</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+</tr>
+<tr>
+    <td class="width50">30</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+</tr>
+<tr>
+    <td class="width50">60</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+</tr>
+<tr>
+    <td class="width50">90</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+</tr>
+<tr>
+    <td class="width50">180</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+</tr>
+<tr>
+    <td class="width50">365</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+    <td class="align-right">0</td>
+</tr>
+	</tbody></table>
+	</div>
+
+	<!-- MOST ACTIVE -->
+	<div class="space-10"></div>
+	<div class="widget-box table-responsive">
+		<table class="table table-hover table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th class="width-85">Найактивніші</th>
+				<th class="align-right">Оцінка</th>
+			</tr>
+		</thead>
+			</table>
+	</div>
+
+	<!-- LONGEST OPEN -->
+	<div class="space-10"></div>
+	<div class="widget-box table-responsive">
+		<table class="table table-hover table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th class="width-85">Відкрита протягом</th>
+				<th class="align-right">Днів</th>
+			</tr>
+		</thead>
+			</table>
+	</div>
+
+	<!-- BY RESOLUTION -->
+	<div class="space-10"></div>
+	<div class="widget-box table-responsive">
+		<table class="table table-hover table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th class="width-35">За резолюціями</th>
+				<th class="align-right">відкриті</th><th class="align-right">вирішені</th><th class="align-right">закриті</th><th class="align-right">усього</th><th class="align-right">коефіціент вирішених</th><th class="align-right">коефіцієнт</th>			</tr>
+		</thead>
+			</table>
+	</div>
+
+	<!-- BY PRIORITY -->
+	<div class="space-10"></div>
+	<div class="widget-box table-responsive">
+		<table class="table table-hover table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th class="width-35">За пріоритетами</th>
+				<th class="align-right">відкриті</th><th class="align-right">вирішені</th><th class="align-right">закриті</th><th class="align-right">усього</th><th class="align-right">коефіціент вирішених</th><th class="align-right">коефіцієнт</th>			</tr>
+		</thead>
+			</table>
+	</div>
+
+	<!-- REPORTER STATS -->
+	<div class="space-10"></div>
+	<div class="widget-box table-responsive">
+		<table class="table table-hover table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th class="width-35">Статистика авторів</th>
+				<th class="align-right">відкриті</th><th class="align-right">вирішені</th><th class="align-right">закриті</th><th class="align-right">усього</th><th class="align-right">коефіціент вирішених</th><th class="align-right">коефіцієнт</th>			</tr>
+		</thead>
+			</table>
+	</div>
+
+	<!-- REPORTER EFFECTIVENESS -->
+	<div class="space-10"></div>
+	<div class="widget-box table-responsive">
+		<table class="table table-hover table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th class="width-35">Ефективність репортерів</th>
+				<th class="align-right">Серйозність</th>
+				<th class="align-right">помилкові</th>
+				<th class="align-right">Всього</th>
+			</tr>
+		</thead>
+			</table>
+	</div>
+
+</div>
+
+<!-- BOTTOM -->
+<div class="col-md-12 col-xs-12">
+
+	<!-- REPORTER BY RESOLUTION -->
+	<div class="space-10"></div>
+	<div class="widget-box table-responsive">
+		<table class="table table-hover table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th class="width-15">Репортери за резолюціями</th>
+				<th class="align-right">відкрита</th>
+<th class="align-right">вирішена</th>
+<th class="align-right">відкрита знову</th>
+<th class="align-right">не відтворювана</th>
+<th class="align-right">не виправляється</th>
+<th class="align-right">дублікат</th>
+<th class="align-right">не проблема</th>
+<th class="align-right">призупинена</th>
+<th class="align-right">не буде вирішена</th>
+<th class="align-right">Всього</th>
+<th class="align-right">% помилкових</th>
+			</tr>
+		</thead>
+			</table>
+	</div>
+
+	<!-- DEVELOPER BY RESOLUTION -->
+	<div class="space-10"></div>
+	<div class="widget-box table-responsive">
+		<table class="table table-hover table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th class="width-15">Розробники за резолюціями</th>
+				<th class="align-right">відкрита</th>
+<th class="align-right">вирішена</th>
+<th class="align-right">відкрита знову</th>
+<th class="align-right">не відтворювана</th>
+<th class="align-right">не виправляється</th>
+<th class="align-right">дублікат</th>
+<th class="align-right">не проблема</th>
+<th class="align-right">призупинена</th>
+<th class="align-right">не буде вирішена</th>
+<th class="align-right">Всього</th>
+<th class="align-right">% вирішених</th>
+			</tr>
+		</thead>
+			</table>
+	</div>
+
+</div>
+
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="space-10"></div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="space-20"></div>
+<div class="footer noprint">
+<div class="footer-inner">
+<div class="footer-content">
+<div class="col-md-6 col-xs-12 no-padding">
+<address>
+<strong>Powered by <a href="https://www.mantisbt.org" title="bug tracking software">MantisBT </a></strong> <br>
+<small>Copyright © 2000 - 2023 MantisBT Team</small><br><small>Зв'яжіться з <a href="mailto:webmaster@example.com" title="Написати веб-майстру по ел. пошті">адміністратором</a> для отримання допомоги</small><br>
+</address>
+</div>
+<div class="col-md-6 col-xs-12">
+<div class="pull-right" id="powered-by-mantisbt-logo">
+<a href="https://www.mantisbt.org" title="Mantis Bug Tracker: a free and open source web based bug tracking system."><img src="/images/mantis_logo.png" width="102" height="35" alt="Powered by Mantis Bug Tracker: a free and open source web based bug tracking system."></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="btn-scroll-up btn btn-sm btn-inverse display" id="btn-scroll-up" href="#">
+<i class="fa fa-angle-double-up ace-icon icon-only bigger-110"></i>
+</a>
+</div>
+	<script type="text/javascript" src="/js/bootstrap-3.4.1.min.js"></script>
+	<script type="text/javascript" src="/js/moment-with-locales-2.29.4.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap-datetimepicker-4.17.47.min.js"></script>
+	<script type="text/javascript" src="/js/typeahead.jquery-1.3.0.min.js"></script>
+	<script type="text/javascript" src="/js/list-1.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/ace.min.js"></script>
+
+
+</body></html>
